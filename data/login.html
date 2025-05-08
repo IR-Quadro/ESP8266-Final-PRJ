@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0d0d0d;
+      color: #00FF00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 80vw;
+      max-width: 450px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+      text-align: center;
+      z-index: 2;
+      animation: slideIn 2s ease-out;
+    }
+
+    h2 {
+      color: #00FF00;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      animation: typing 3s steps(20) 1s forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #00FF00;
+    }
+
+    h3 {
+      color: #aaa;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-size: 1rem;
+      color: #00FF00;
+      align-self: flex-start;
+      margin-left: 10px;
+      margin-bottom: 8px;
+    }
+
+    input[type='text'],
+    input[type='password'] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #00FF00;
+      border-radius: 8px;
+      background-color: transparent;
+      color: #00FF00;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    input[type='text']:focus,
+    input[type='password']:focus {
+      border-color: #00FF00;
+      outline: none;
+    }
+
+    input[type='submit'] {
+      background-color: transparent;
+      color: #00FF00;
+      border: 2px solid #00FF00;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    input[type='submit']:hover {
+      background-color: #00FF00;
+      color: #0d0d0d;
+      box-shadow: 0 0 10px #00FF00;
+    }
+
+    /* افکت تایپ برای نام */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* انیمیشن ورود فرم */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* افکت‌های پس‌زمینه حرکت کد */
+    .background-codes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+      animation: glitch 2s linear infinite;
+    }
+
+    .background-codes span {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      font-size: 1.2rem;
+      color: #00FF00;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes glitch {
+      0% { opacity: 0.2; }
+      25% { opacity: 0.4; }
+      50% { opacity: 0.6; }
+      75% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes scroll {
+      0% { top: 100%; }
+      100% { top: -100%; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="background-codes">
+    <span style="top: 0;">> sudo apt-get update && sudo apt-get upgrade</span>
+    <span style="top: 50%;">> python3 -m pip install --upgrade pip</span>
+    <span style="top: 100%;">> chmod +x run.sh</span>
+  </div>
+
+  <div class="container">
+    <h2>Login</h2>
+    <h3>Design by Linuxunic</h3>
+    <br>
+    <form action="/check" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+</body>
+</html>

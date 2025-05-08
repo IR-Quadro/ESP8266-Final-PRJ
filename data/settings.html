@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    label {
+      font-size: 1rem;
+      color: #333;
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #357a38;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #008CBA;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #005f73;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.2rem;
+      }
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Change Credentials</h2>
+    <form action="/change" method="POST">
+      <label for="newuser">New Username:</label>
+      <input type="text" name="newuser" id="newuser" required><br>
+      <label for="newpass">New Password:</label>
+      <input type="password" name="newpass" id="newpass" required><br>
+      <input type="submit" value="Save">
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    a {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      background-color: #008CBA;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      width: 60%;
+      max-width: 300px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #005F73;
+    }
+    /* Styles for mobile responsiveness */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      a {
+        width: 80%;
+      }
+    }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.2rem;
+      }
+      a {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to Dashboard</h2>
+    <a href="/settings">Change Credentials</a>
+    <a href="/controll">Relay Control</a>
+    <a href="/sensor">Sensor</a>
+    <a href="/logout">Logout</a>
+  </div>
+</body>
+</html>

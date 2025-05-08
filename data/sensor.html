@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .sensor-data {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #008CBA;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #008CBA;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background: #005F73;
+    }
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.2rem;
+      }
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sensor Monitoring</h2>
+    <p>Temperature: <span id="temp" class="sensor-data">--</span> °C</p>
+    <p>Humidity: <span id="humid" class="sensor-data">--</span> %</p>
+    <a href="/dashboard">Back to Dashboard</a>
+  </div>
+  <script>
+    function updateData() {
+      fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('temp').innerText = data.temperatureVal;
+          document.getElementById('humid').innerText = data.humidityVal;
+        })
+        .catch(error => console.log('Error:', error));
+    }
+    setInterval(updateData, 3000);
+    updateData();
+  </script>
+</body>
+</html>

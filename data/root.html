@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP8266 Web Server</title>
+  <style>
+    /* استایل برای پس‌زمینه و طراحی کلی صفحه */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+    h2 {
+      color: #333;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #008CBA;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #005f73;
+    }
+    /* استایل برای ریسپانسیو بودن صفحه */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 30px;
+      }
+    }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- عنوان صفحه -->
+    <h2>Welcome</h2>
+    
+    <!-- توضیحات کوتاه برای کاربر -->
+    <p>ESP8266 Web Server</p>
+    <p>about us: @IR_Quadro</p>
+    
+    <!-- لینک به صفحه لاگین -->
+    <a href="/login">Login</a>
+  </div>
+</body>
+</html>
