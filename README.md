@@ -1,2 +1,12 @@
-## پروژه وب سرور، رمز عبور و نمایش دما - رطوبت
+##  وب‌سرور با قابلیت ورود و نمایش داده‌های محیطی
+
+در این پروژه یک شبکه بی‌سیم محلی راه‌اندازی می‌شود. کاربر با نام کاربری و رمز وارد می‌شود و می‌تواند دما و رطوبت محیط را ببیند.
+ این اطلاعات هم روی نمایشگر نشان داده می‌شود و هم در صفحه اینترنتی. رمز ورود را می‌توان از بخش تنظیمات تغییر داد.
+این سامانه بدون نیاز به اینترنت کار می‌کند.
+
+##  Web Server with Login and Environmental Data Display
+
+This project creates a local Wi-Fi network using a microcontroller. It runs a simple web server where users can log in with a username and password.
+After logging in, the user can view temperature and humidity data collected from a sensor. These values are also shown on an LCD screen.
+The login credentials can be updated from the settings page. Everything works offline without internet access.
 
