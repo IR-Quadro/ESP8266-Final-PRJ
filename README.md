@@ -1,14 +1,8 @@
-##  وب‌سرور با قابلیت ورود و نمایش داده‌های محیطی
-
-در این پروژه یک شبکه بی‌سیم محلی راه‌اندازی می‌شود. کاربر با نام کاربری و رمز وارد می‌شود و می‌تواند دما و رطوبت محیط را ببیند.
- این اطلاعات هم روی نمایشگر نشان داده می‌شود و هم در صفحه اینترنتی. رمز ورود را می‌توان از بخش تنظیمات تغییر داد.
-این سامانه بدون نیاز به اینترنت کار می‌کند.
 
 ##  Web Server with Login and Environmental Data Display
 
-This project creates a local Wi-Fi network using a microcontroller. It runs a simple web server where users can log in with a username and password.
-After logging in, the user can view temperature and humidity data collected from a sensor. These values are also shown on an LCD screen.
-The login credentials can be updated from the settings page. Everything works offline without internet access.
+
+This project sets up a local Wi-Fi network using the ESP8266 module, operating entirely offline without internet access. Users can log in with a username and password to view temperature and humidity data collected from the AHT10 sensor. The data is displayed both on an LCD screen and through a web interface. The login credentials can be changed via a settings page. All configuration data is stored and retrieved using the internal SPIFFS file system.
 
 ---
 ## Login Page
